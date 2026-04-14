@@ -1,0 +1,30 @@
+function updateClock() {
+    const now = new Date();
+
+    let h = now.getHours();
+    let m = now.getMinutes();
+    let s = now.getSeconds();
+
+    h = h < 10 ? "0" + h : h;
+    m = m < 10 ? "0" + m : m;
+    s = s < 10 ? "0" + s : s;
+
+    const time = `${h}:${m}:${s}`;
+
+    const days = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+    const months = [
+        "Jan","Feb","Mar","Apr","May","Jun",
+        "Jul","Aug","Sep","Oct","Nov","Dec"
+    ];
+
+    const date = `${days[now.getDay()]}, ${now.getDate()} ${months[now.getMonth()]} ${now.getFullYear()}`;
+
+    document.getElementById("time").textContent = time;
+    document.getElementById("date").textContent = date;
+}
+
+// update tiap detik
+setInterval(updateClock, 1000);
+
+// tampilkan langsung tanpa delay
+updateClock();
