@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffe6f0;
+  font-family: 'Comic Sans MS', cursive;
+}
+
+.clock-container {
+  background: #ffc0cb;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  width: 300px;
+}
+
+.bunny {
+  font-size: 40px;
+}
+
+#time {
+  font-size: 36px;
+  margin: 10px 0;
+  color: #fff;
+}
+
+#date {
+  font-size: 18px;
+  color: #fff;
+}
